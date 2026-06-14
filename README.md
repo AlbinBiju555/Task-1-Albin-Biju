@@ -1,6 +1,6 @@
 # Task-1-Albin-Biju
 Repository for Task-1
-# Vaccination Tracker
+# Vaccination Tracker Frontend
 
 ## Overview
 **Vaccination Tracker** is a responsive full-stack web application built using Python Flask, MySQL, and native HTML5, CSS3, and JavaScript, designed under a mobile-first paradigm for the DecodeLabs Industrial Training Program. 
