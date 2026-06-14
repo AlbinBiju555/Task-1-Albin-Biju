@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination Schedule</title>
+    <link rel="stylesheet" href="./static/vacc_sched.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Vaccination Schedule</h1>
+
+    <div id="scheduleContainer">
+        <div class="schedule-card">
+            <h3>No Scheduled Vaccinations</h3>
+            <p>You currently have no upcoming vaccination appointments.</p>
+            <p>Future vaccination schedules assigned by healthcare staff or booked by you will appear here.</p>
+        </div>
+    </div>
+
+</div>
+
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const role = localStorage.getItem("role");
+        const userId = localStorage.getItem("user_id");
+        
+        let apiUrl = '/api/get_bookings';
+        
+        
+        if (role === "patient" && userId) {
+            apiUrl += `?user_id=${userId}`;
+        }
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(res => {
+                if(res.data && res.data.length > 0) {
+                    const container = document.getElementById("scheduleContainer");
+                    container.innerHTML = "";
+                    
+                    res.data.forEach(book => {
+                        const card = document.createElement("div");
+                        card.className = "schedule-card";
+                        card.style.borderLeft = "6px solid #0077b6";
+                        card.style.marginBottom = "15px";
+                        card.style.textAlign = "left";
+                        
+                        card.innerHTML = `
+                            <span style="background:#0077b6; color:white; padding:3px 8px; font-size:12px; border-radius:3px; float:right; font-weight:bold;">User ID: ${book.user_id}</span>
+                            <h3 style="color: #0077b6; margin-top:0;">${book.vaccine_name}</h3>
+                            <p><strong>Centre:</strong> ${book.vaccine_centre}</p>
+                            <p><strong>Scheduled Date:</strong> <span style="color: #023e8a; font-weight: bold;">${book.booking_date}</span></p>
+                        `;
+                        container.appendChild(card);
+                    });
+                }
+            })
+            .catch(err => console.error("Error loading schedule data feed:", err));
+    });
+</script>
+
+</body>
+</html>

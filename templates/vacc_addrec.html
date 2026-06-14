@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Vaccination Record</title>
+    <link rel="stylesheet" href="/static/vacc_addrec.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Add Vaccination Record</h1>
+
+    <form id="recordForm">
+
+        <label>User ID</label>
+        <input type="number" id="addPatientId" placeholder="Enter User ID" required>
+
+        <label>User Name</label>
+        <input type="text" id="addPatientName" placeholder="Enter Patient Name" required>
+
+        <label>Vaccine Name</label>
+        <select id="addVaccineName" required>
+            <option value="">Select Vaccine</option>
+            <option>BCG</option>
+            <option>DPT</option>
+            <option>MMR</option>
+            <option>Hepatitis B</option>
+            <option>Polio</option>
+            <option>COVID-19</option>
+        </select>
+        
+        <label>Vaccination Date</label>
+        <input type="date" id="addVaccinationDate" required>
+
+        <label>Dose Number</label>
+        <input type="number" id="addDoseNumber" min="1" placeholder="Enter Dose Number" required>
+
+        <label>Vaccination Status</label>
+        <select id="addStatus" required>
+            <option value="Completed">Completed</option>
+            <option value="Missed">Missed</option>
+        </select>
+        
+        <label>Administered By</label>
+        <input type="text" id="addAdministeredBy" placeholder="Nurse Name" required>
+
+        <label>Remarks</label>
+        <textarea id="addRemarks" rows="4" placeholder="Additional Notes"></textarea>
+
+        <button type="submit">
+            Save Record
+        </button>
+
+    </form>
+
+</div>
+
+<script src="/static/vacc_addrec.js"></script>
+   
+</body>
+</html>

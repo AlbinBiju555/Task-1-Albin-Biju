@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Vaccination</title>
+    <link rel="stylesheet" href="./static/vacc_book.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Book Vaccination Appointment</h1>
+
+    <form id="bookingForm">
+
+        <label>Vaccine Name</label>
+        <select id="vaccineName" required>
+            <option value="">Select Vaccine</option>
+            <option>BCG</option>
+            <option>DPT</option>
+            <option>MMR</option>
+            <option>Polio</option>
+            <option>Hepatitis B</option>
+            <option>COVID-19</option>
+        </select>
+
+        <label>Vaccination Centre</label>
+        <select id="vaccineCentre"  required>
+
+            <option value="">Select Centre</option>
+
+            <optgroup label="Thiruvananthapuram">
+                <option>Government Medical College, Thiruvananthapuram</option>
+
+            </optgroup>
+
+            <optgroup label="Kollam">
+                <option>Government Medical College, Kollam</option>
+            </optgroup>
+
+            <optgroup label="Pathanamthitta">
+                <option>Government General Hospital, Pathanamthitta</option>
+            </optgroup>
+
+            <optgroup label="Alappuzha">
+                <option>Government Medical College, Alappuzha</option>
+            </optgroup>
+
+            <optgroup label="Kottayam">
+                <option>Government Medical College, Kottayam</option>
+            </optgroup>
+
+            <optgroup label="Idukki">
+                <option>Taluk Hospital, Thodupuzha</option>
+            </optgroup>
+
+            <optgroup label="Ernakulam">
+                <option>Government Medical College, Ernakulam</option>
+            </optgroup>
+
+            <optgroup label="Thrissur">
+                <option>Government Medical College, Thrissur</option>
+            </optgroup>
+
+            <optgroup label="Palakkad">
+                <option>Government Medical College, Palakkad</option>
+            </optgroup>
+
+            <optgroup label="Malappuram">
+                <option>Government Medical College, Manjeri</option>
+            </optgroup>
+
+            <optgroup label="Kozhikode">
+                <option>Government Medical College, Kozhikode</option>
+            </optgroup>
+
+            <optgroup label="Wayanad">
+                <option>Government Medical College, Wayanad</option>
+                <option>District Hospital, Mananthavady</option>
+            </optgroup>
+
+            <optgroup label="Kannur">
+                <option>Government Medical College, Kannur</option>
+            </optgroup>
+
+            <optgroup label="Kasaragod">
+                <option>Government Medical College, Kasaragod</option>
+            </optgroup>
+
+        </select>
+
+        <label>Select Date</label>
+        <input type="date" id="bookingDate" required>
+
+        <button type="submit">
+            Book Appointment
+        </button>
+
+    </form>
+
+</div>
+
+<button type="submit">
+            Book Appointment
+        </button>
+
+    </form>
+
+</div>
+
+    <script src="/static/vacc_book.js"></script>
+
+</body>
+</html>
+

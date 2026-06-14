@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaccination Tracker Dashboard</title>
+<link rel="stylesheet" href="./static/vacc_css2.css">
+</head>
+<body>
+
+<header>
+
+    <nav>
+
+    <div class="logo">
+        Vaccination Tracker
+    </div>
+
+
+
+    <div class="account-menu">
+
+        <button id="accountBtn">
+            Account 
+        </button>
+
+        <div class="dropdown" id="dropdown">
+
+            <p><strong>User:</strong><span id="userProfileName">Loading...</span></p>
+            <a href="/logout">Logout</a>
+            
+            
+
+        </div>
+
+    </div>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Welcome Back
+        </h1>
+
+        <p>
+            Manage all vaccination records from one place.
+        </p>
+
+        
+
+    </div>
+
+</section>
+
+<section class="dashboard">
+
+    <h2>Dashboard</h2>
+
+    <div class="dashboard-grid">
+
+        <div class="card"
+             onclick="location.href='/records'">
+            <h3>Vaccination Records</h3>
+            <p>View all completed vaccinations.</p>
+        </div>
+
+        <div class="card"
+             onclick="location.href='/schedule'">
+            <h3>Schedule</h3>
+            <p>Check upcoming vaccines.</p>
+        </div>
+
+        <div class="card"
+             onclick="location.href='/bookings'">
+            <h3>Bookings</h3>
+            <p>Book vaccination appointments.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    <h3>Vaccination Tracker</h3>
+
+    <p>Email: support@vaccinetracker.com</p>
+
+    <p>© 2026 All Rights Reserved</p>
+
+</footer>
+
+<script src="./static/vacc_js2.js"></script>
+
+</body>
+</html>
